@@ -1,3 +1,4 @@
+#this program scrapes images from any link you give it!
 from bs4 import BeautifulSoup
 import requests
 import urllib.request
