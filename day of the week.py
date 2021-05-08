@@ -1,5 +1,5 @@
 #This program tells you what day of the week any day you enter was on
-# 0 = monday 1= tuesday etc.
+# 0 = monday 1= tuesday 2= wenesday 3= thursday 4= friday 5= saturday 6= sunday
 import datetime
 import calendar
 
