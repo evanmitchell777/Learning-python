@@ -16,7 +16,7 @@ while rate <= 0:
 
 
 while time <= 0:
-    time = int(input("enter the time in years: "))
+    time = float(input("enter the time in years: "))
     if time <=0:
         print("time cant be less than  or equal to zero")
 
