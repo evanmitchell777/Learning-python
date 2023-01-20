@@ -1,0 +1,12 @@
+import random 
+compnum=random.randint(1, 10)
+guess=int(input("enter your guess 1-10: "))
+if guess >= 11:
+    print("please enter a number thats valid")
+elif guess > compnum:
+    print("Your guess is too high! my number was",compnum)
+elif guess < compnum:
+    print("your guess is too low! my number was ", compnum)
+elif guess == compnum:
+    print("you guessed correctly!!! the number was ",compnum)
+
