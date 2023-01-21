@@ -1,0 +1,26 @@
+
+import sqlite3
+
+#this creates table
+conn = sqlite3.connect('todolist.db')
+cursor=conn.cursor()
+cursor.execute('''CREATE TABLE todo_list (id INTEGER PRIMARY KEY, todo TEXT)''')
+
+option=input("What would you like to do: (A)dd new item, (U)pdate existing item, (D)elete item: ")
+if option == "A":
+    stuff_todo=input("Add to to do list: ")
+    cursor.execute("INSERT INTO todo_list (todo) VALUES (?)", (stuff_todo,))
+    conn.commit()
+
+elif option=="U":
+    id = input("Enter the id of the item you want to update: ")
+    stuff_todo=input("enter  item you want to update: ")
+    cursor.execute("UPDATE todo_list SET todo = ? WHERE id = ?", (stuff_todo, id))
+    conn.commit()
+
+elif option == "D":
+    id = input("Enter the id of the item you want to delete: ")
+    cursor.execute("DELETE FROM todo_list WHERE id = ? ", (id))
+    conn.commit()
+
+conn.close()
