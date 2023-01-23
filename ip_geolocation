@@ -1,0 +1,12 @@
+import requests
+import json
+ip = input("Enter IP address here: ")
+url = f'https://api.ipgeolocation.io/ipgeo?apiKey=74f2eb8b179841a4849b2e39cca25bf8&ip={ip}'
+response = requests.get(url)
+data = json.loads(response.text)
+location = data['country_code2']
+state=data['state_prov']
+city=data['city']
+print(location)
+print(state)
+print(city)
